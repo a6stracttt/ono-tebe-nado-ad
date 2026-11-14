@@ -1,1 +1,356 @@
 /* место для вашего кода */
+.header {
+  width: 1100px;
+  height: 293px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 130px 1fr;
+  grid-template-rows: 105px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #fff;
+  padding: 93px 22px 96px 19px;
+}
+
+.header__links-list {
+  display: flex;
+  list-style-type: circle;
+  gap: 34px;
+  margin-left: 33px;
+  margin-top: 6px;
+}
+
+.header__link-list-item:first-of-type {
+  list-style-type: none;
+}
+
+.header__link {
+  text-decoration: underline;
+  text-underline-offset: 8%;
+}   
+
+.header__link_active {
+  text-decoration: none;
+}
+
+.header__logo-image {
+  width: 136px;
+}
+
+.address-header {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  max-width: 239px;
+  line-height: 1.4;
+  justify-self: end;
+  align-items: flex-start;
+  color: #333;
+  padding-right: 56px;
+  font-style: normal;
+}
+
+.cover {
+  width: 1100px;
+  min-height: 757px;
+  position: relative;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  z-index: 0;
+  text-transform: uppercase;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover__overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(0, 0, 0, .48);
+}
+
+.cover__title {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: clamp(44px, 8vw, 76px);
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 0 50px;
+}
+
+.cover__title span:nth-child(1) {
+  align-self: flex-start;
+  letter-spacing: 25px;
+  font-size: 100px;
+  border: 0px;
+}
+
+.cover__title span:nth-child(2) {
+  align-self: center;
+  letter-spacing: 25px;
+  font-size: 100px;
+  border: 0px;
+}
+
+.cover__title span:nth-child(3) {
+  align-self: flex-end;
+  letter-spacing: 25px;
+  font-size: 100px;
+  border: 0px;
+}
+
+.cover__bottom {
+  padding: 0 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover__button {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.lots {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 25px;
+    padding: 186px 26px 0px 24px;
+}
+
+.lots__heading {
+    text-transform: uppercase;
+    padding: 0px 53px 0px 35px;
+    padding-left: 38px;
+}
+
+.lots__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+    gap: 26px;
+    justify-content: space-between;
+    color: #fff;
+
+}
+
+.lots__card-list-item {
+    display: flex;
+    flex-grow: 1;
+}
+
+.card-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  z-index: 0;
+  padding: 54px 37px 48px 40px;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  background-position: center;
+  background-size: cover;
+  min-height: 563px;
+}
+
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+}
+
+.card__title {
+  display: block;
+  text-decoration: underline;
+  z-index: 2;
+  justify-content: space-between;
+  align-self: flex-start;
+  align-content: flex-start;
+}
+
+.card__text {
+  display: block;
+  font-size: 20px;
+  z-index: 2;
+  align-self: flex-end;
+  align-content: flex-end;
+  justify-content: end;
+  justify-self: end;
+  margin-top: auto;
+  line-height: 1.2;
+}
+
+.lots__look-more-link {
+  font-size: 20px;
+  font-weight: 400;
+  text-underline-offset: 10%;
+  text-decoration: underline;
+  padding-left: 38px;
+  padding-top: 2px;
+}
+
+.about {
+  display: block;
+  background-color: #fff;
+  padding: 181px 2px 0 42px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'about__column about__title'
+    '. about__text';
+  gap: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about__column {
+  display: flex;
+  grid-area: about__column;
+  justify-self: center;
+  align-items: flex-start;
+}
+
+.about__logo {
+  display: flex;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__logo-image {
+  width: 147px;
+}
+
+.about__title {
+  display: flex;
+  grid-area: about__title;
+  align-self: center;
+  margin: 0;
+  margin-left: 40px;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  grid-area: about__text;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 3px 21px 0 40px;
+  line-height: 1.2;
+  word-spacing: 1px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 1100px;
+  margin: 200px auto 0;
+  padding: 20px 20px 60px;
+}
+
+.address-footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  max-width: 239px;
+  line-height: 1.25;
+  color: #333;
+  align-items: flex-start;
+  font-style: normal;
+}
+
+.address-footer p {
+  margin: 0 0 5px 0;
+}
+
+.contact {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__menu {
+  text-align: center;
+}
+
+.footer__menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer__menu-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__social_icon {
+  height: 60px;
+  width: 60px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 50%;
+  object-fit: contain;
+}
