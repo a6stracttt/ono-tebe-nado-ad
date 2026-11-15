@@ -1,13 +1,12 @@
 /* место для вашего кода */
 .header {
-  width: 1100px;
-  height: 293px;
+  width: 100%;
+  min-height: 293px;
   display: grid;
   gap: 10px;
-  grid-template-columns: 1fr 130px 1fr;
+  grid-template-columns: 1fr 136px 1fr; 
   grid-template-rows: 105px;
   align-items: center;
-  justify-content: center;
   font-size: 18px;
   font-weight: 400;
   background-color: #fff;
@@ -53,7 +52,7 @@
 }
 
 .cover {
-  width: 1100px;
+  width: 100%;
   min-height: 757px;
   position: relative;
   background-image: url(../images/cover.jpg);
@@ -81,31 +80,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: clamp(44px, 8vw, 76px);
+  padding: 0 50px;
+}
+
+.cover__title span {
+  letter-spacing: 25px;
+  font-size: 100px;
   line-height: 1.15;
   font-weight: 700;
-  padding: 0 50px;
 }
 
 .cover__title span:nth-child(1) {
   align-self: flex-start;
-  letter-spacing: 25px;
-  font-size: 100px;
-  border: 0px;
 }
 
 .cover__title span:nth-child(2) {
   align-self: center;
-  letter-spacing: 25px;
-  font-size: 100px;
-  border: 0px;
 }
 
 .cover__title span:nth-child(3) {
   align-self: flex-end;
-  letter-spacing: 25px;
-  font-size: 100px;
-  border: 0px;
 }
 
 .cover__bottom {
@@ -129,52 +123,44 @@
 }
 
 .lots {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    gap: 25px;
-    padding: 186px 26px 0px 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  gap: 25px;
+  padding: 186px 24px 0 24px;
 }
 
 .lots__heading {
-    text-transform: uppercase;
-    padding: 0px 53px 0px 35px;
-    padding-left: 38px;
+  text-transform: uppercase;
+  padding: 0 38px;
 }
 
 .lots__card-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    list-style: none;
-    gap: 26px;
-    justify-content: space-between;
-    color: #fff;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Идеально ровные 3 колонки */
+  gap: 26px;
+  width: 100%;
+  list-style: none;
+  color: #fff;
 }
 
 .lots__card-list-item {
-    display: flex;
-    flex-grow: 1;
+  display: flex;
 }
 
 .card-link {
-    display: block;
-    width: 100%;
-    text-decoration: none;
+  display: block;
+  width: 100%;
+  text-decoration: none;
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 100%;
   z-index: 0;
   padding: 54px 37px 48px 40px;
-  min-width: 100%;
-  object-fit: cover;
-  vertical-align: bottom;
   background-position: center;
   background-size: cover;
   min-height: 563px;
@@ -196,20 +182,13 @@
   display: block;
   text-decoration: underline;
   z-index: 2;
-  justify-content: space-between;
-  align-self: flex-start;
-  align-content: flex-start;
 }
 
 .card__text {
   display: block;
   font-size: 20px;
   z-index: 2;
-  align-self: flex-end;
-  align-content: flex-end;
-  justify-content: end;
-  justify-self: end;
-  margin-top: auto;
+  margin-top: auto; /* Прижимает текст к низу карточки */
   line-height: 1.2;
 }
 
@@ -225,7 +204,7 @@
 .about {
   display: block;
   background-color: #fff;
-  padding: 181px 2px 0 42px;
+  padding: 181px 24px 0 24px;
 }
 
 .about__grid {
@@ -236,7 +215,6 @@
     'about__column about__title'
     '. about__text';
   gap: 20px 40px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -278,18 +256,16 @@
   grid-area: about__text;
   font-size: 20px;
   font-weight: 400;
-  margin: 3px 21px 0 40px;
+  margin: 3px 0 0 40px;
   line-height: 1.2;
-  word-spacing: 1px;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  max-width: 1100px;
   margin: 200px auto 0;
-  padding: 20px 20px 60px;
+  padding: 20px 24px 60px 24px;
 }
 
 .address-footer {
